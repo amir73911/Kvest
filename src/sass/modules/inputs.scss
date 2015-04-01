@@ -1,0 +1,52 @@
+.input-text,
+textarea,
+.jq-selectbox__select {
+  border: 2px solid $c-light-blue2;
+  font: 12px 'Open Sans';
+  color: $c-dark-blue;
+  @include animate();
+  @include border-radius(6px);
+  @include input-placeholder {
+    color: $c-placeholder;
+  }
+  &:hover,
+  &:focus {
+    border-color: darken($c-light-blue2, 6%);
+  }
+}
+
+.input-text {
+  padding: 0 10px;
+  height: $input-height;
+  &.size-lg {
+    height: $input-height-big;
+    font-size: 13px;
+  }
+  &.with-icon {
+    padding-left: 35px;
+  }
+}
+.input-icon-wrap {
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    color: $c-placeholder;
+    font-size: 15px;
+    line-height: 100%;
+  }
+}
+
+textarea {
+  padding: 5px 10px;
+  resize: vertical;
+  min-height: $input-height;
+  max-height: $input-height*4;
+}
+
+.jq-selectbox__select {
+  height: $input-height;
+  line-height: $input-height - 5;
+  padding: 0 45px 0 10px;
+}

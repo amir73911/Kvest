@@ -1,0 +1,45 @@
+@mixin clearfix() {
+  & {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin childs-vert-align ($align: middle, $without-space: 'false') {
+  @if($without-space == 'true') {
+    font-size: 0;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: $align;
+  }
+  &>* {
+    display: inline-block;
+    vertical-align: $align;
+  }
+}
+
+@mixin flex-childs-vertical-align ($type: center, $justify: space-between) {
+  @include display-flex(inline-flex);
+  @include align-items($type);
+  @include justify-content($justify);
+}
+
+@mixin flex-childs-vertical-align-ie ($type: center, $justify: justify) {
+  display: box;
+  box-align: $type;
+  box-pack: $justify;
+}
+
+@mixin animate($time: $animation-time) {
+  @include transition(all $time);
+}

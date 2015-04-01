@@ -1,0 +1,47 @@
+header {
+  height: $header-height;
+  width: 100%;
+  padding: 0 $main-gap;
+  @include box-shadow(0 5px 10px rgba(0,0,0,0.05));
+  @include flex-childs-vertical-align(center, space-between);
+  .sidebar-holder {
+    position: relative;
+    .icon-menu {
+      font-size: 16px;
+      cursor: pointer;
+      color: $c-gray-blue;
+      &:hover {
+        color: $c-orange;
+      }
+    }
+  }
+  .header-account-block {
+    @include childs-vert-align(middle, 'true');
+    a {
+      text-decoration: none;
+    }
+    .account-name {
+      text-align: right;
+      .acc-name {
+        font: 600 14px/16px 'Open Sans';
+        color: $c-gray-blue;
+      }
+      .acc-type {
+        color: $c-gray-blue2;
+        font: 12px/16px 'Open Sans';
+      }
+    }
+    .account-image {
+      overflow: hidden;
+      margin: 0 $main-gap;
+      @include border-radius(50%);
+    }
+    .logout {
+      color: $c-gray-blue;
+      font-size: 14px;
+      &:hover {
+        color: $c-orange;
+      }
+    }
+  }
+}

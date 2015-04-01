@@ -1,0 +1,19 @@
+.btn {
+  border: 2px solid $c-orange;
+  height: $input-height;
+  color: $c-orange;
+  background: white;
+  font: 600 12px 'Open Sans';
+  padding: 0 32px;
+  @include animate();
+  @include border-radius(6px);
+  &:hover,
+  &:focus {
+    background: $c-orange;
+    color: white;
+  }
+  &.size-lg {
+    height: $input-height-big;
+    font-size: 13px;
+  }
+}

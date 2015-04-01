@@ -1,0 +1,88 @@
+.sidebar {
+  width: $sidebar-width;
+  height: 100%;
+  background: $c-dark-blue;
+  &.expanded {
+    width: $sidebar-width-expanded;
+    .logo {
+      background: white inline-image("../images/logo-big.png") center center no-repeat;
+      background-size: 119px 25px;
+    }
+    .navigator {
+      li {
+        a {
+          text-align: left;
+          display: block;
+          padding-left: 10px;
+          height: 42px;
+          @include childs-vert-align(middle, 'true');
+          .nav-inner {
+            width: 100%;
+            span[class^="nav-inner-"] {
+              vertical-align: middle;
+            }
+            .nav-inner-1 {
+              text-align: center;
+              width: 25%;
+              span[class^="icon-"] {
+                line-height: 30px;
+              }
+            }
+            .nav-inner-2 {
+              width: 75%;
+              font: 600 14px/30px 'Open Sans';
+            }
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    display: block;
+    height: $header-height;
+    background: white inline-image("../images/logo-small.png") center center no-repeat;
+    background-size: 40px 25px;
+    border-right: 1px solid #e8e8ea;
+  }
+  .navigator {
+    padding-top: $main-gap;
+    li {
+      &.active {
+        background: $c-dark-blue-hover;
+        .nav-inner-1 span[class^="icon-"],
+        .nav-inner-2 {
+          color: white !important;
+        }
+      }
+      &:hover {
+        .nav-inner-1 span[class^="icon-"],
+        .nav-inner-2 {
+          color: $c-gray-blue3 !important;
+        }
+      }
+      a {
+        height: 70px;
+        width: 100% !important;
+        text-align: center;
+        text-decoration: none;
+        @include flex-childs-vertical-align(center, space-around);
+        .nav-inner {
+          span[class^="nav-inner-"] {
+            display: inline-block;
+            width: 100%;
+          }
+          .nav-inner-1 {
+            span[class^="icon-"] {
+              font-size: 20px;
+              color: $c-gray-blue;
+            }
+          }
+          .nav-inner-2 {
+            font: 600 10px/20px 'Open Sans';
+            color: $c-gray-blue3;
+          }
+        }
+      }
+    }
+  }
+}

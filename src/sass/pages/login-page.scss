@@ -1,0 +1,46 @@
+.login-page {
+  position: relative;
+  @include display-flex;
+  @include flex-flow(column);
+  @include justify-content(space-between);
+  @include align-items(stretch);
+  .login-page-header {
+    height: $header-height;
+    text-align: center;
+    @include childs-vert-align();
+    @include box-shadow(0 5px 10px rgba(0,0,0,0.05));
+    .logo {
+      background: white inline-image("../images/logo-big.png") center center no-repeat;
+      background-size: 119px 25px;
+      height: 25px;
+      width: 119px;
+      display: inline-block;
+    }
+  }
+  .login-form {
+    text-align: center;
+    .login-form-inner {
+      display: inline-block;
+      width: 250px;
+      .heading {
+        font: 300 24px 'Open Sans';
+        margin-bottom: $big-gap;
+        color: $c-dark-blue;
+      }
+      .input-text {
+        width: 100%;
+        margin-bottom: $small-gap;
+      }
+      .buttons {
+        padding: 5px 0;
+      }
+    }
+  }
+  .login-page-footer {
+    height: 50px;
+    text-align: center;
+    background: $c-dark-blue;
+    color: $c-gray-blue2;
+    font: 12px/50px 'Open Sans';
+  }
+}

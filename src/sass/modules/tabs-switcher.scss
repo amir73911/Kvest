@@ -1,0 +1,49 @@
+.tabs-switcher {
+  @include flex-childs-vertical-align(center, flex-start);
+  border-bottom: 2px solid $c-light-blue2;
+  width: 100%;
+  .tab-link {
+    padding-right: 34px;
+    &:hover {
+      a {
+        font-weight: 600;
+        color: $c-gray-blue;
+        &:before {
+          background: $c-gray-blue;
+        }
+      }
+    }
+    &.active {
+      a {
+        font-weight: 600;
+        color: $c-orange;
+        &:before {
+          background: $c-orange;
+        }
+      }
+    }
+    a {
+      display: block;
+      font: 12px/12px 'Open Sans';
+      color: $c-gray-blue2;
+      text-decoration: none;
+      padding-bottom: 10px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+    }
+  }
+}
+
+.tab-containers {
+  padding-top: 36px;
+  .tab {
+     display: none;
+  }
+}

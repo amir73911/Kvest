@@ -1,0 +1,8 @@
+label {
+  color: $c-dark-blue;
+  font: 12px 'Open Sans';
+  cursor: pointer;
+  &.checkbox-label {
+    margin-right: $main-gap;
+  }
+}

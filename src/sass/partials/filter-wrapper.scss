@@ -1,0 +1,48 @@
+.filter-wrapper {
+  margin-bottom: $big-gap;
+  table {
+    width: 100%;
+    tr {
+      td {
+        vertical-align: middle;
+        padding-bottom: $small-gap;
+        &.labels {
+          padding-right: 38px;
+        }
+        &.inputs {
+          width: 100%;
+          .input-text {
+            width: 30%;
+            margin-right: $small-gap;
+          }
+        }
+        .jq-selectbox {
+          width: 100%;
+        }
+        label {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.data-table-wrapper {
+  .filter-wrapper {
+    display: none;
+    padding: $main-gap $big-gap;
+    margin-bottom: 0;
+    table {
+      width: auto;
+      td {
+        padding-right: 30px;
+        padding-bottom: 0;
+        white-space: nowrap;
+        .jq-selectbox {
+          width: auto;
+          min-width: 300px;
+        }
+      }
+    }
+  }
+}
