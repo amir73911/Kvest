@@ -17,6 +17,20 @@ $(document).ready(function() {
 
     $('select, input[type="checkbox"]').styler();
 
+    $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+    $( "#date-input-from" ).datepicker({
+        numberOfMonths: 1,
+        onClose: function( selectedDate ) {
+            $( "#date-input-to" ).datepicker( "option", "minDate", selectedDate );
+        }
+    });
+    $( "#date-input-to" ).datepicker({
+        numberOfMonths: 1,
+        onClose: function( selectedDate ) {
+            $( "#date-input-from" ).datepicker( "option", "maxDate", selectedDate );
+        }
+    });
+
     tabs_switcher();
 
     table_opener();

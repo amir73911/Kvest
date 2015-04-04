@@ -25,16 +25,35 @@ textarea,
   &.with-icon {
     padding-left: 35px;
   }
+  &.date-input {
+
+  }
 }
 .input-icon-wrap {
   position: relative;
+  display: inline-block;
   &:before {
     position: absolute;
     top: 11px;
-    left: 13px;
     color: $c-placeholder;
     font-size: 15px;
     line-height: 100%;
+  }
+}
+.input-icon-wrap-left {
+  &:before {
+    left: 13px;
+  }
+  .input-text {
+    padding-left: 35px;
+  }
+}
+.input-icon-wrap-right {
+  &:before {
+    right: 13px;
+  }
+  .input-text {
+    padding-right: 35px;
   }
 }
 

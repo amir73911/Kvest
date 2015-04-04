@@ -14,6 +14,7 @@
 
 @import "vendor/tipped";
 @import "vendor/form-styler";
+@import "vendor/jquery-ui";
 
 @import "partials/base";
 @import "partials/sidebar";
@@ -26,6 +27,6 @@
 @import "modules/buttons";
 @import "modules/tabs-switcher";
 @import "modules/forms";
-@import "modules/forms";
+@import "modules/helpers";
 
 @import "pages/login-page";

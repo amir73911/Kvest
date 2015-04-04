@@ -1,5 +1,16 @@
 .filter-wrapper {
   margin-bottom: $big-gap;
+  &.date-filter {
+    table {
+      width: auto;
+      td {
+        padding-right: $main-gap;
+        .input-icon-wrap {
+          margin: 0 $small-gap;
+        }
+      }
+    }
+  }
   table {
     width: 100%;
     tr {

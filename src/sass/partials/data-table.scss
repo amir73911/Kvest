@@ -45,6 +45,11 @@
 .data-table {
   width: 100%;
   height: auto;
+  &.vamiddle {
+    th, td {
+      vertical-align: middle;
+    }
+  }
   th, td {
     text-align: left;
   }
