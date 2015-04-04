@@ -83,6 +83,9 @@
         padding: $main-gap $small-gap*2;
         color: $c-gray-blue;
         font: 600 10px/14px 'Open Sans';
+        .icon-btn {
+          color: $c-gray-blue;
+        }
       }
     }
   }
