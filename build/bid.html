@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    
+    <!--Styles-->
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+
+    <div class="site-wrapper">
+        <div class="sidebar">
+            <a class="logo" href="index.html" title="Logo"></a>
+            <ul class="navigator">
+                <li class="active">
+                    <a href="#">
+                        <span class="nav-inner">
+                            <span class="nav-inner-1">
+                                <span class="icon-nomenclature"></span>
+                            </span>
+                            <span class="nav-inner-2">Номенклатура</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-inner">
+                            <span class="nav-inner-1">
+                                <span class="icon-staff"></span>
+                            </span>
+                            <span class="nav-inner-2">Персонал</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-inner">
+                            <span class="nav-inner-1">
+                                <span class="icon-bid"></span>
+                            </span>
+                            <span class="nav-inner-2">Заявки</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-inner">
+                            <span class="nav-inner-1">
+                                <span class="icon-statistics"></span>
+                            </span>
+                            <span class="nav-inner-2">Отчеты</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-inner">
+                            <span class="nav-inner-1">
+                                <span class="icon-warhouse"></span>
+                            </span>
+                            <span class="nav-inner-2">Склад</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="nav-inner">
+                            <span class="nav-inner-1">
+                                <span class="icon-salary"></span>
+                            </span>
+                            <span class="nav-inner-2">Зарплата</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content-wrapper">
+            <div class="header">
+                <div class="sidebar-holder">
+                    <span class="icon-menu"></span>
+                </div>
+                <div class="header-account-block">
+                    <div class="account-name">
+                        <div class="acc-name">Ирина Иванова</div>
+                        <div class="acc-type">Администратор</div>
+                    </div>
+                    <a class="account-image" href="#" title="Аккаунт">
+                        <img src="http://placehold.it/35x35">
+                    </a>
+                    <a href="#" class="logout" title="Выйти">
+                        <span class="icon-logout"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <ul class="tabs-switcher">
+                    <li class="tab-link active"><a href="tab1">Отчеты по заявкам</a></li>
+                    <li class="tab-link"><a href="tab2">Отчеты по деффектам</a></li>
+                </ul>
+                <div class="tab-containers">
+                    <div id="tab1" class="tab">
+
+                        <h1>Отчеты по заявкам</h1>
+
+                        <div class="filter-wrapper">
+                            <form action="#">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td class="labels">
+                                            <label for="select1">Заявки</label>
+                                        </td>
+                                        <td class="inputs">
+                                            <select name="name" id="select1">
+                                                <option value="1">Заявка № 52 от 03.02.2015 до 26.02.2015 (Адрйко)</option>
+                                                <option value="1">Заявка № 52 от 03.02.2015 до 26.02.2015 (Адрйко)</option>
+                                                <option value="1">Заявка № 52 от 03.02.2015 до 26.02.2015 (Адрйко)</option>
+                                                <option value="1">Заявка № 52 от 03.02.2015 до 26.02.2015 (Адрйко)</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="labels">
+                                            <label for="input1">Поиск по коду</label>
+                                        </td>
+                                        <td class="inputs">
+                                            <input id="input1" class="input-text" type="text"/>
+                                            <input class="btn" type="submit" value="Найти"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <label class="checkbox-label"><input type="checkbox"/>Скрыть отгруженные</label>
+                                            <label class="checkbox-label"><input type="checkbox"/>Скрыть готовую продукцию</label>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+
+                        <div class="data-table-wrapper">
+                            <div class="filter-wrapper">
+                                <form action="#">
+                                    <table>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <label for="select2">Заявки</label>
+                                            </td>
+                                            <td>
+                                                <select name="name" id="select2">
+                                                    <option value="1">Заявка № 52 от 03.02.2015 до 26.02.2015 (Адрйко)</option>
+                                                    <option value="1">Заявка № 52 от 03.02.2015 до 26.02.2015 (Адрйко)</option>
+                                                    <option value="1">Заявка № 52 от 03.02.2015 до 26.02.2015 (Адрйко)</option>
+                                                    <option value="1">Заявка № 52 от 03.02.2015 до 26.02.2015 (Адрйко)</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <label class="checkbox-label"><input type="checkbox"/>Скрыть отгруженные</label>
+                                                <label class="checkbox-label"><input type="checkbox"/>Скрыть готовую продукцию</label>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                            <table class="data-table">
+                                <thead>
+                                <tr>
+                                    <th>Продукция</th>
+                                    <th>Заготовка</th>
+                                    <th>Продукция</th>
+                                    <th>Заготовка</th>
+                                    <th>Продукция</th>
+                                    <th>Заготовка</th>
+                                    <th>Продукция</th>
+                                    <th>Заготовка</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>[16] Дверь остекленная
+                                        Реджиа/ч.ясень/черн./
+                                        трип./2000*900/Бамбук
+                                        52</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                </tr>
+                                <tr>
+                                    <td>[16] Дверь остекленная
+                                        Реджиа/ч.ясень/черн./
+                                        трип./2000*900/Бамбук
+                                        52</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                </tr>
+                                <tr>
+                                    <td>[16] Дверь остекленная
+                                        Реджиа/ч.ясень/черн./
+                                        трип./2000*900/Бамбук
+                                        52</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                    <td>Хахарченко
+                                        2015-02-14
+                                        13:08:39</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div id="tab2" class="tab">
+                        <h1>Отчеты по деффектам</h1>
+                        <div class="filter-wrapper date-filter">
+                            <form action="#">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="date-input-from">Дата от</label>
+                                            <div class="input-icon-wrap input-icon-wrap-right icon-calendar">
+                                                <input id="date-input-from" class="input-text date-input" type="text"/>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label for="date-input-from">Дата до</label>
+                                            <div class="input-icon-wrap input-icon-wrap-right icon-calendar">
+                                                <input id="date-input-to" class="input-text date-input" type="text"/>
+                                            </div>
+                                            <input type="submit" class="btn" value="Сформировать"/>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+
+                        <div class="data-table-wrapper">
+                            <table class="data-table vamiddle">
+                                <thead>
+                                <tr>
+                                    <th>Номер заявки</th>
+                                    <th>Номер продукции </th>
+                                    <th>Наименование</th>
+                                    <th>Модель</th>
+                                    <th>Размер</th>
+                                    <th>Кто виноват</th>
+                                    <th>Кто внес деффект</th>
+                                    <th>Дата деффекта</th>
+                                    <th class="text-center">Описание</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>29</td>
+                                    <td>1</td>
+                                    <td>Дверь</td>
+                                    <td>10-1235-22</td>
+                                    <td>156*156</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>12.12.2012</td>
+                                    <td class="text-center">
+                                        <a class="icon-btn icon-comments" href="#"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>1</td>
+                                    <td>Дверь</td>
+                                    <td>10-1235-22</td>
+                                    <td>156*156</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>12.12.2012</td>
+                                    <td class="text-center">
+                                        <a class="icon-btn icon-comments" href="#"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>1</td>
+                                    <td>Дверь</td>
+                                    <td>10-1235-22</td>
+                                    <td>156*156</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>12.12.2012</td>
+                                    <td class="text-center">
+                                        <a class="icon-btn icon-comments" href="#"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>1</td>
+                                    <td>Дверь</td>
+                                    <td>10-1235-22</td>
+                                    <td>156*156</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>12.12.2012</td>
+                                    <td class="text-center">
+                                        <a class="icon-btn icon-comments" href="#"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>1</td>
+                                    <td>Дверь</td>
+                                    <td>10-1235-22</td>
+                                    <td>156*156</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>Иванов В.И.</td>
+                                    <td>12.12.2012</td>
+                                    <td class="text-center">
+                                        <a class="icon-btn icon-comments" href="#"></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
