@@ -12,7 +12,7 @@
   }
 }
 
-@mixin childs-vert-align ($align: middle, $without-space: 'false') {
+@mixin childs-vert-align ($align: middle, $without-space: 'true') {
   @if($without-space == 'true') {
     font-size: 0;
   }

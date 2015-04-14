@@ -12,3 +12,11 @@
     @include flex(1 1);
   }
 }
+
+.layout2 {
+  position: relative;
+  @include display-flex;
+  @include flex-flow(column);
+  @include justify-content(space-between);
+  @include align-items(stretch);
+}

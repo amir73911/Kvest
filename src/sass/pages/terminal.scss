@@ -1,0 +1,39 @@
+.terminal1 {
+  padding: 0 60px;
+  .heading {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .terminal-selector {
+    @include childs-vert-align(top, 'true');
+    li {
+      a {
+        display: block;
+        width: 100%;
+        border: 2px solid $c-light-blue2;
+        color: $c-dark-blue;
+        text-decoration: none;
+        text-align: center;
+        @include border-radius(5px);
+        @include childs-vert-align();
+        @include animate();
+        &:hover {
+          color: $c-orange;
+          border-color: $c-orange;
+          font-weight: 600;
+        }
+      }
+    }
+    &.type {
+      margin: -12px;
+      li {
+        padding: 12px;
+        width: 25%;
+        a {
+          height: 60px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
