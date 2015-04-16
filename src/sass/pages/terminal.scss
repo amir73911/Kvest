@@ -1,4 +1,4 @@
-.terminal1 {
+.terminal {
   padding: 0 60px;
   .heading {
     text-align: center;
@@ -25,13 +25,34 @@
       }
     }
     &.type {
-      margin: -12px;
+      margin: 0 -12px;
       li {
         padding: 12px;
         width: 25%;
         a {
           height: 60px;
           font-size: 16px;
+        }
+      }
+    }
+    &.workers {
+      margin: 0 -17px;
+      li {
+        padding: 17px;
+        width: 33.333%;
+        a {
+          height: 80px;
+          text-align: left;
+          padding: 0 15px;
+          @include childs-vert-align();
+          span {
+            font-size: 17px;
+          }
+          img {
+            @include border-radius(50%);
+            vertical-align: middle;
+            margin-right: 10px;
+          }
         }
       }
     }

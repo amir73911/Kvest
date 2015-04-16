@@ -25,3 +25,25 @@
     color: $c-orange !important;
   }
 }
+
+.back-link {
+  font-size: 15px;
+  color: $c-gray-blue;
+  text-decoration: none;
+  @include animate();
+  &:before {
+    content: "\e60f";
+    font-family: "icomoon";
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid inherit;
+    width: 15px;
+    padding: 4px;
+    text-align: center;
+    margin: -2px 5px 0 0;
+    @include border-radius(50%);
+  }
+  &:hover {
+    color: $c-orange;
+  }
+}
