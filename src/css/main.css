@@ -120,7 +120,7 @@
   content: "\e601";
 }
 
-.site-wrapper {
+body:not(.layout-table-opened) .site-wrapper {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row nowrap;
@@ -128,15 +128,15 @@
   -webkit-align-items: stretch;
   align-items: stretch;
 }
-.site-wrapper .sidebar {
+body:not(.layout-table-opened) .site-wrapper .sidebar {
   -webkit-flex: 0 0 90px;
   flex: 0 0 90px;
 }
-.site-wrapper .sidebar.expanded {
+body:not(.layout-table-opened) .site-wrapper .sidebar.expanded {
   -webkit-flex: 0 0 175px;
   flex: 0 0 175px;
 }
-.site-wrapper .content-wrapper {
+body:not(.layout-table-opened) .site-wrapper .content-wrapper {
   -webkit-flex: 1 1;
   flex: 1 1;
 }
@@ -1960,20 +1960,19 @@ h1 {
   white-space: nowrap;
 }
 
-.data-table-wrapper .filter-wrapper {
-  display: none;
+.table-opened .filter-wrapper {
   padding: 15px 30px;
   margin-bottom: 0;
 }
-.data-table-wrapper .filter-wrapper table {
+.table-opened .filter-wrapper table {
   width: auto;
 }
-.data-table-wrapper .filter-wrapper table td {
+.table-opened .filter-wrapper table td {
   padding-right: 30px;
   padding-bottom: 0;
   white-space: nowrap;
 }
-.data-table-wrapper .filter-wrapper table td .jq-selectbox {
+.table-opened .filter-wrapper table td .jq-selectbox {
   width: auto;
   min-width: 300px;
 }
@@ -1983,15 +1982,6 @@ h1 {
   overflow: hidden;
   overflow-x: auto;
   position: relative;
-}
-.data-table-wrapper.maximized {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  z-index: 100;
 }
 .data-table-wrapper.maximized .filter-wrapper {
   display: block;
@@ -2009,6 +1999,7 @@ h1 {
   height: 0;
   border-style: solid;
   border-width: 20px 20px 0 0;
+  z-index: 1;
   border-color: #e48126 transparent transparent transparent;
 }
 .data-table-wrapper .maximize-data-table:before {
@@ -2293,6 +2284,38 @@ label.checkbox-label {
 
 .pull-right {
   float: right;
+}
+
+.sticky-wrap {
+  overflow-x: auto;
+  position: relative;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+.sticky-wrap .sticky-thead, .sticky-wrap .sticky-col, .sticky-wrap .sticky-intersect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .125s ease-in-out;
+  z-index: 50;
+  width: auto;
+  /* Prevent table from stretching to full size */
+}
+.sticky-wrap .sticky-thead {
+  box-shadow: 0 0.25em 0.1em -0.1em rgba(0, 0, 0, 0.125);
+  z-index: 100;
+  width: 100%;
+  /* Force stretch */
+}
+.sticky-wrap .sticky-intersect {
+  z-index: 150;
+}
+.sticky-wrap .sticky-intersect th {
+  background-color: #666;
+  color: #eee;
+}
+.sticky-wrap td, .sticky-wrap th {
+  box-sizing: border-box;
 }
 
 .login-page .login-form {

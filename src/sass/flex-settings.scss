@@ -1,15 +1,17 @@
-.site-wrapper {
-  @include display-flex;
-  @include flex-flow(row nowrap);
-  @include align-items(stretch);
-  .sidebar {
-    @include flex(0 0 $sidebar-width);
-    &.expanded {
-      @include flex(0 0 $sidebar-width-expanded);
+body:not(.layout-table-opened) {
+  .site-wrapper {
+    @include display-flex;
+    @include flex-flow(row nowrap);
+    @include align-items(stretch);
+    .sidebar {
+      @include flex(0 0 $sidebar-width);
+      &.expanded {
+        @include flex(0 0 $sidebar-width-expanded);
+      }
     }
-  }
-  .content-wrapper {
-    @include flex(1 1);
+    .content-wrapper {
+      @include flex(1 1);
+    }
   }
 }
 

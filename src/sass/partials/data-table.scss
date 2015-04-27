@@ -4,13 +4,6 @@
   overflow-x: auto;
   position: relative;
   &.maximized {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff;
-    z-index: 100;
     .filter-wrapper {
       display: block;
     }
@@ -30,6 +23,7 @@
     height: 0;
     border-style: solid;
     border-width: 20px 20px 0 0;
+    z-index: 1;
     border-color: $c-orange transparent transparent transparent;
     &:before {
       content: "\e612";

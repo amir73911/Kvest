@@ -4,5 +4,7 @@
 //= vendor/datepicker.ru.js
 //= vendor/tipped.js
 //= vendor/jquery.formstyler.min.js
+//= vendor/throttle.js
 
+//= partials/table-stick.js
 //= partials/app.js
