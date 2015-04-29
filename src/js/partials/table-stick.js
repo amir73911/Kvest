@@ -18,28 +18,28 @@ $(function(){
             if($t.hasClass('overflow-y')) $t.removeClass('overflow-y').parent().addClass('overflow-y');
 
             // Create new sticky table head (basic)
-            $t.after('<table class="data-table sticky-thead" />');
+            $t.after('<table class="data-table sticky-thead" style="visibility: hidden;" />');
 
-            // If <tbody> contains <th>, then we create sticky column and intersect (advanced)
-            if($t.find('tbody th').length > 0) {
-                $t.after('<table class="sticky-col" /><table class="sticky-intersect" />');
+            // If <tbody> contains <td.stick-col>, then we create sticky column and intersect (advanced)
+            if($t.find('tbody td.stick-col').length > 0) {
+                $t.after('<table class="data-table sticky-col" />');
             }
 
             // Create shorthand for things
             var $stickyHead  = $(this).siblings('.sticky-thead'),
                 $stickyCol   = $(this).siblings('.sticky-col'),
-                $stickyInsct = $(this).siblings('.sticky-intersect'),
                 $stickyWrap  = $(this).parent('.sticky-wrap');
 
             $stickyHead.append($thead);
 
             $stickyCol
                 .append($col)
+                .css('visibility', 'hidden')
+                .find('thead').css('visibility', 'hidden')
+                .end()
                 .find('thead th:gt(0)').remove()
                 .end()
-                .find('tbody td').remove();
-
-            $stickyInsct.html('<thead><tr><th>'+$t.find('thead th:first-child').html()+'</th></tr></thead>');
+                .find('tbody td:not(.stick-col)').remove();
 
             // Set widths
             var setWidths = function () {
@@ -56,7 +56,7 @@ $(function(){
                     $stickyHead.width($t.width());
 
                     // Set width of sticky table col
-                    $stickyCol.find('th').add($stickyInsct.find('th')).width($t.find('thead th').width())
+                    $stickyCol.find('td.stick-col').width($t.find('thead th').width())
                 },
                 repositionStickyHead = function () {
                     // Return value of calculated allowance
@@ -74,7 +74,7 @@ $(function(){
                             });
                         } else {
                             // When top of wrapping parent is in view
-                            $stickyHead.add($stickyInsct).css({
+                            $stickyHead.css({
                                 visibility: "hidden",
                                 top: 0
                             });
@@ -84,13 +84,13 @@ $(function(){
                         // Position sticky header based on viewport scrollTop
                         if($w.scrollTop() > $t.offset().top && $w.scrollTop() < $t.offset().top + $t.outerHeight() - allowance) {
                             // When top of viewport is in the table itself
-                            $stickyHead.add($stickyInsct).css({
+                            $stickyHead.css({
                                 visibility: "visible",
                                 top: $w.scrollTop() - $t.offset().top
                             });
                         } else {
                             // When top of viewport is above or below table
-                            $stickyHead.add($stickyInsct).css({
+                            $stickyHead.css({
                                 visibility: "hidden",
                                 top: 0
                             });
@@ -100,7 +100,7 @@ $(function(){
                 repositionStickyCol = function () {
                     if($stickyWrap.scrollLeft() > 0) {
                         // When left of wrapping parent is out of view
-                        $stickyCol.add($stickyInsct).css({
+                        $stickyCol.css({
                             visibility: "visible",
                             left: $stickyWrap.scrollLeft()
                         });
@@ -108,7 +108,7 @@ $(function(){
                         // When left of wrapping parent is in view
                         $stickyCol
                             .css({ visibility: "hidden" })
-                            .add($stickyInsct).css({ left: 0 });
+                            .css({ left: 0 });
                     }
                 },
                 calcAllowance = function () {
